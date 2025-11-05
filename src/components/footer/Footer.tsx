@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { getStableId } from "@/helpers/getStableId";
 import {
   FooterContainer,
   FooterContent,
@@ -6,42 +6,31 @@ import {
   SocialIcon,
   CopyRight,
 } from "./styles";
+import { useAppContext } from "@/context/AppContext";
 
 const Footer = () => {
+  const {
+    homeData: { footer: footerData },
+  } = useAppContext();
   return (
     <FooterContainer>
       <FooterContent>
         <SocialLinks>
-          <SocialIcon
-            href="https://github.com/"
-            target="_blank"
-            aria-label="GitHub"
-          >
-            <FaGithub />
-          </SocialIcon>
-          <SocialIcon
-            href="https://linkedin.com/"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin />
-          </SocialIcon>
-          <SocialIcon
-            href="https://twitter.com/"
-            target="_blank"
-            aria-label="Twitter"
-          >
-            <FaTwitter />
-          </SocialIcon>
-          <SocialIcon href="mailto:someone@example.com" aria-label="Email">
-            <FaEnvelope />
-          </SocialIcon>
+          {footerData.socialLinks.map((socialItem, i) => {
+            return (
+              <SocialIcon
+                href={socialItem.url}
+                target="_blank"
+                aria-label={socialItem.platform}
+                key={getStableId(socialItem, "footersocial")}
+              >
+                <socialItem.Icon />
+              </SocialIcon>
+            );
+          })}
         </SocialLinks>
 
-        <CopyRight>
-          © {new Date().getFullYear()} <strong>Vinay.Dev</strong> — All Rights
-          Reserved.
-        </CopyRight>
+        <CopyRight>{footerData.copyrightText}</CopyRight>
       </FooterContent>
     </FooterContainer>
   );

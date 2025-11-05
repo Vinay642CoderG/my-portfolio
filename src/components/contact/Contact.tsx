@@ -10,68 +10,55 @@ import {
   SocialLinks,
   SocialIcon,
 } from "./styles";
-import {
-  FaEnvelope,
-  FaPhoneAlt,
-  FaMapMarkerAlt,
-  FaGithub,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { useAppContext } from "@/context/AppContext";
+import { getStableId } from "@/helpers/getStableId";
 
 const Contact = () => {
+  const {
+    homeData: { contact: contactData },
+  } = useAppContext();
   return (
     <ContactSection id="contact">
-      <ContactTitle>Contact Me</ContactTitle>
-      <ContactSubtitle>
-        Let’s collaborate, build something amazing, or just have a chat.
-      </ContactSubtitle>
+      <ContactTitle>{contactData.title}</ContactTitle>
+      <ContactSubtitle>{contactData.description}</ContactSubtitle>
 
       <ContactDetails>
         <ContactItem>
           <IconWrapper>
             <FaEnvelope />
           </IconWrapper>
-          <span>vinay@example.com</span>
+          <span>{contactData.email}</span>
         </ContactItem>
 
         <ContactItem>
           <IconWrapper>
             <FaPhoneAlt />
           </IconWrapper>
-          <span>+91 9876543210</span>
+          <span>{contactData.phone}</span>
         </ContactItem>
 
         <ContactItem>
           <IconWrapper>
             <FaMapMarkerAlt />
           </IconWrapper>
-          <span>New Delhi, India</span>
+          <span>{contactData.location}</span>
         </ContactItem>
       </ContactDetails>
 
       <SocialLinks>
-        <SocialIcon
-          href="https://github.com/yourusername"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <FaGithub />
-        </SocialIcon>
-        <SocialIcon
-          href="https://linkedin.com/in/yourusername"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin />
-        </SocialIcon>
-        <SocialIcon
-          href="https://twitter.com/yourusername"
-          target="_blank"
-          aria-label="Twitter"
-        >
-          <FaTwitter />
-        </SocialIcon>
+        {contactData.social.map((val, i) => {
+          return (
+            <SocialIcon
+              href={val.url}
+              target="_blank"
+              aria-label={val.platform}
+              key={getStableId(val, "contactsocial")}
+            >
+              <val.Icon />
+            </SocialIcon>
+          );
+        })}
       </SocialLinks>
     </ContactSection>
   );

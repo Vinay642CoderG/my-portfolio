@@ -10,27 +10,23 @@ import {
   HeroButtons,
   Button,
 } from "./styles";
-
-// Typed effect roles
-const roles = [
-  "Full-Stack Developer",
-  "MERN Stack Engineer",
-  "Creative Coder",
-  "UI/UX Enthusiast",
-];
+import { useAppContext } from "@/context/AppContext";
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
+  const {
+    homeData: { hero: heroData },
+  } = useAppContext();
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
+      setCurrentRole((prev) => (prev + 1) % heroData.typed.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
       {/* Motion Background Blobs */}
       <motion.div
         style={{
@@ -84,12 +80,12 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <HeroSubtitle>Hello, I'm</HeroSubtitle>
-        <HeroTitle>Vinay Kumar</HeroTitle>
+        <HeroSubtitle>{heroData.subtitle}</HeroSubtitle>
+        <HeroTitle>{heroData.title}</HeroTitle>
 
         {/* Typed Text Animation */}
         <HeroTagline>
-          A passionate{" "}
+          {heroData.tagline.start}{" "}
           <strong>
             <AnimatePresence mode="wait">
               <motion.span
@@ -99,11 +95,11 @@ const Hero = () => {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
               >
-                {roles[currentRole]}
+                {heroData.typed[currentRole]}
               </motion.span>
             </AnimatePresence>
           </strong>{" "}
-          crafting interactive & visually stunning web experiences.
+          {heroData.tagline.end}
         </HeroTagline>
 
         <HeroButtons

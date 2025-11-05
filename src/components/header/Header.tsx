@@ -16,6 +16,8 @@ import {
   MobileMenuButton,
   MobileNav,
 } from "./styles";
+import { Link, useLocation } from "react-router-dom";
+import { useAppContext } from "@/context/AppContext";
 
 const menuItems = [
   { id: "hero", label: "Home", icon: <FaHome /> },
@@ -27,19 +29,41 @@ const menuItems = [
 ];
 
 const Header = () => {
+  const {
+    homeData: { header: headerData },
+  } = useAppContext();
   const [open, setOpen] = useState(false);
 
-  const renderLinks = (onClick?: () => void) =>
-    menuItems.map(({ id, label, icon }) => (
+  // const renderLinks = (onClick?: () => void) =>
+  //   menuItems.map(({ id, label, icon }) => (
+  //     <NavLinkStyled key={id} href={`#${id}`} onClick={onClick}>
+  //       {icon} {label}
+  //     </NavLinkStyled>
+  //   ));
+
+  // inside your component
+  const location = useLocation();
+
+  const renderLinks = (onClick?: () => void) => {
+    // check if we are on the projects page
+    const isProjectsPage = location.pathname === "/projects";
+
+    if (isProjectsPage) {
+      return;
+    }
+
+    // otherwise, show the regular menu
+    return menuItems.map(({ id, label, icon }) => (
       <NavLinkStyled key={id} href={`#${id}`} onClick={onClick}>
         {icon} {label}
       </NavLinkStyled>
     ));
+  };
 
   return (
     <HeaderContainer>
       <Logo>
-        <a href="#hero">Vinay.Dev</a>
+        <Link to={"/"}>{headerData.title}</Link>
       </Logo>
 
       {/* Desktop Navigation */}
