@@ -37,7 +37,7 @@ export const SkillsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  max-width: 1000px;
+  max-width: 1260px;
   width: 100%;
 `;
 

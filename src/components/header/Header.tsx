@@ -18,10 +18,12 @@ import {
 } from "./styles";
 import { Link, useLocation } from "react-router-dom";
 import { useAppContext } from "@/context/AppContext";
+import { FaBookAtlas } from "react-icons/fa6";
 
 const menuItems = [
   { id: "hero", label: "Home", icon: <FaHome /> },
   { id: "about", label: "About", icon: <FaUserAlt /> },
+  { id: "education", label: "Education", icon: <FaBookAtlas /> },
   { id: "skills", label: "Skills", icon: <FaTools /> },
   { id: "experience", label: "Experience", icon: <FaBriefcase /> },
   { id: "projects", label: "Projects", icon: <FaFolderOpen /> },

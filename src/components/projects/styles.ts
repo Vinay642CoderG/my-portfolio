@@ -53,7 +53,7 @@ export const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
-  max-width: 1100px;
+  max-width: 1260px;
   margin: 0 auto 2rem auto;
 
   @media (max-width: 768px) {
@@ -93,6 +93,8 @@ export const ViewMoreButton = styled(Link)`
 `;
 
 export const ProjectItem = styled.div`
+  max-width: 400px;
+  margin: auto;
   background: #111;
   border: 1px solid #222;
   border-radius: 14px;

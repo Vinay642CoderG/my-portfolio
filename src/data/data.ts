@@ -3,32 +3,40 @@ import {
   FaPython,
   FaNodeJs,
   FaHtml5,
-  FaDatabase,
   FaEnvelope,
+  FaJava,
 } from "react-icons/fa";
 import {
   SiDjango,
   SiMongodb,
-  SiTailwindcss,
   SiJavascript,
+  SiCss3,
+  SiC,
+  SiCplusplus,
+  SiJquery,
+  SiPhp,
+  SiSqlite,
+  SiLaravel,
+  SiMysql,
 } from "react-icons/si";
 
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import type { IData } from "@/types/types";
 
 const data: IData = {
   hero: {
     subtitle: "Hello, I'm",
-    title: "Vinay Kumar",
+    title: "Vinay Bhagat",
     tagline: {
       start: "A passionate",
-      end: "crafting interactive & visually stunning web experiences.",
+      end: "building scalable, user-focused web applications.",
     },
     typed: [
       "Full-Stack Developer",
-      "MERN Stack Engineer",
-      "Creative Coder",
-      "UI/UX Enthusiast",
+      "MERN Stack Developer",
+      "Laravel Developer",
+      "Python Developer",
+      "Django Developer",
     ],
   },
 
@@ -36,8 +44,8 @@ const data: IData = {
     title: "About Me",
     description: `I am a dedicated full-stack developer with experience in building dynamic web applications. I love creating clean, modern, and user-friendly interfaces, and I enjoy solving complex problems with innovative solutions.`,
     highlights: [
-      { value: "2+", label: "Years of Experience" },
-      { value: "15+", label: "Projects Completed" },
+      { value: "0.6", label: "Years of Experience" },
+      { value: "10+", label: "Projects Completed" },
     ],
   },
 
@@ -45,14 +53,20 @@ const data: IData = {
     {
       degree: "Bachelor of Technology (B.Tech)",
       field: "Computer Science and Engineering",
-      school: "ABC University",
-      year: "2018 - 2022",
+      school: "Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal M.P",
+      year: "2021 - 2025",
     },
     {
-      degree: "High School Diploma",
-      field: "Science",
-      school: "XYZ School",
-      year: "2016 - 2018",
+      degree: "Higher Secondary School Certification (10+2)",
+      field: "PCM (Math Group)",
+      school: "Sahara Public Hr. Sec. School (MP Board)",
+      year: "2019 - 2020",
+    },
+    {
+      degree: "Higher Secondary School Certification 10th",
+      field: "",
+      school: "Sahara Public Hr. Sec. School (MP Board)",
+      year: "2017 - 2018",
     },
   ],
 
@@ -61,43 +75,56 @@ const data: IData = {
       title: "Frontend",
       iconColor: "#00adb5",
       skills: [
-        { name: "React.js", Icon: FaReact },
-        { name: "JavaScript", Icon: SiJavascript },
+        { name: "React Js", Icon: FaReact },
         { name: "HTML5", Icon: FaHtml5 },
-        { name: "CSS3 / Tailwind", Icon: SiTailwindcss },
+        { name: "CSS3 / Boostrap5/ Tailwind", Icon: SiCss3 },
+        { name: "JavaScript", Icon: SiJavascript },
+        { name: "Jquery", Icon: SiJquery },
       ],
     },
     {
       title: "Backend",
       iconColor: "#06d6a0",
       skills: [
-        { name: "Node.js", Icon: FaNodeJs },
+        { name: "Express Js", Icon: FaNodeJs },
         { name: "Django", Icon: SiDjango },
-        { name: "Python", Icon: FaPython },
+        { name: "Laravel", Icon: SiLaravel },
       ],
     },
     {
       title: "Database",
       iconColor: "#f39c12",
       skills: [
-        { name: "MySQL", Icon: FaDatabase },
+        { name: "MySQL", Icon: SiMysql },
         { name: "MongoDB", Icon: SiMongodb },
+        { name: "Sqlite3", Icon: SiSqlite },
+      ],
+    },
+    {
+      title: "Languages",
+      iconColor: "#00fc3b",
+      skills: [
+        { name: "C", Icon: SiC },
+        { name: "C++", Icon: SiCplusplus },
+        { name: "Java", Icon: FaJava },
+        { name: "Python", Icon: FaPython },
+        { name: "PHP", Icon: SiPhp },
       ],
     },
   ],
 
   experience: [
     {
-      role: "Frontend Developer",
-      company: "Tech Solutions",
-      duration: "Jan 2023 - Present",
+      role: "Web Developer Intern",
+      company: "Teknobit Solutions Inc.",
+      duration: "Jan 2024 - July 2024",
       description:
-        "Building responsive and interactive web applications using React.js and Tailwind CSS.",
+        "Reduced page load time by 50% using lazy loading and code splitting. Delivered projects on time with a 4-member Git-based team.",
     },
     {
-      role: "Full-Stack Developer Intern",
-      company: "Innovate Labs",
-      duration: "Jun 2022 - Dec 2022",
+      role: "Full Stack Developer Intern",
+      company: "Mainflow Services Pvt. Ltd.",
+      duration: "Jun 2024 - Aug 2024",
       description:
         "Developed REST APIs with Node.js and Express, and integrated them with MongoDB.",
     },
@@ -105,20 +132,26 @@ const data: IData = {
 
   projects: [
     {
-      name: "Portfolio Website",
-      description:
-        "A responsive portfolio website built with React and Emotion JS.",
-      image: "/images/portfolio.png",
-      tags: ["React", "Emotion", "CSS"],
-      links: { github: "https://github.com/vinay/portfolio", live: "#" },
+      name: "Ecommerce Website Using MERN Stack",
+      description: "A MERN stack ecommerce website",
+      image: "/images/task-manager.png",
+      tags: [
+        "React Js",
+        "Node Js",
+        "Express Js",
+        "Tailwindcss",
+        "MongoDB",
+        "Stripe",
+      ],
+      links: { github: "", live: "" },
     },
     {
-      name: "Task Manager App",
+      name: "Task Management App",
       description:
         "A MERN stack app to manage daily tasks with authentication.",
       image: "/images/task-manager.png",
-      tags: ["React", "Node.js", "MongoDB"],
-      links: { github: "https://github.com/vinay/task-manager", live: "#" },
+      tags: ["React Js", "Node Js", "Express Js", "Tailwindcss", "MongoDB"],
+      links: { github: "", live: "" },
     },
   ],
 
@@ -126,20 +159,19 @@ const data: IData = {
     title: "Contact Me",
     description:
       "Feel free to reach out for collaborations or just a friendly chat!",
-    email: "vinay@example.com",
-    phone: "+91 12345 67890",
-    location: "India",
+    email: "ytvinay345@gmail.com",
+    phone: "+91-7389712102",
+    location: "M.P., India",
     social: [
       {
         platform: "LinkedIn",
-        url: "https://linkedin.com/in/vinay",
+        url: "https://linkedin.com/in/vinay-bhagat-2482212a3/",
         Icon: FaLinkedin,
       },
-      { platform: "GitHub", url: "https://github.com/vinay", Icon: FaGithub },
       {
-        platform: "Twitter",
-        url: "https://twitter.com/vinay",
-        Icon: FaTwitter,
+        platform: "GitHub",
+        url: "https://github.com/Vinay642CoderG",
+        Icon: FaGithub,
       },
     ],
   },
@@ -149,12 +181,19 @@ const data: IData = {
   },
   footer: {
     socialLinks: [
-      { platform: "GitHub", url: "https://github.com/", Icon: FaGithub },
-      { platform: "LinkedIn", url: "https://linkedin.com/", Icon: FaLinkedin },
-      { platform: "Twitter", url: "https://twitter.com/", Icon: FaTwitter },
+      {
+        platform: "GitHub",
+        url: "https://github.com/Vinay642CoderG",
+        Icon: FaGithub,
+      },
+      {
+        platform: "LinkedIn",
+        url: "https://linkedin.com/in/vinay-bhagat-2482212a3/",
+        Icon: FaLinkedin,
+      },
       {
         platform: "Email",
-        url: "mailto:someone@example.com",
+        url: "mailto:ytvinay345@gmail.com",
         Icon: FaEnvelope,
       },
     ],
