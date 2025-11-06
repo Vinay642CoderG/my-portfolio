@@ -36,6 +36,7 @@ export const HeroContent = styled(motion.div)`
 `;
 
 export const HeroSubtitle = styled.h3`
+  margin-top: 33px;
   font-size: 1.2rem;
   font-weight: 400;
   color: #aaa;
