@@ -1,4 +1,4 @@
-import{s as e,p as a,k as r}from"./index-CFkkkl0t.js";const t=r`
+import{s as e,p as a,k as r}from"./index-CbBFicO6.js";const t=r`
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 `,i=e.section`
