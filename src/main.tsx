@@ -8,6 +8,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <AppContextProvider>
       <BrowserRouter
+        basename={import.meta.env.BASE_URL}
         future={{ v7_relativeSplatPath: false, v7_startTransition: false }}
       >
         <App />

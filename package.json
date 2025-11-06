@@ -1,9 +1,8 @@
 {
-  "name": "vite-project",
+  "name": "my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Vinay642CoderG.github.io/my-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -36,6 +35,7 @@
     "globals": "^16.4.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vite-plugin-gh-pages": "^1.0.1"
   }
 }
