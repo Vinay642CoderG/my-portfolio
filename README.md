@@ -24,7 +24,7 @@ I’m a Full Stack Web Developer passionate about building impactful, scalable, 
 
 ## 📫 Connect With Me
 
-- 🌐 Portfolio: [your-portfolio-link.com](#)
+- 🌐 Portfolio: [https://vinay642coderg.github.io/my-portfolio/](#)
 - 💼 LinkedIn: [linkedin.com/in/vinay-bhagat-2482212a3/](#)
 - 📧 Email: ytvinay345@gmail.com
 
