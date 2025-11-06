@@ -1,4 +1,3 @@
-import type { IHomeData } from "@/types/homeData";
 import {
   FaReact,
   FaPython,
@@ -15,8 +14,9 @@ import {
 } from "react-icons/si";
 
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import type { IData } from "@/types/types";
 
-const homeData: IHomeData = {
+const data: IData = {
   hero: {
     subtitle: "Hello, I'm",
     title: "Vinay Kumar",
@@ -162,4 +162,4 @@ const homeData: IHomeData = {
   },
 };
 
-export default homeData;
+export default data;

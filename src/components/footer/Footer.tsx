@@ -10,7 +10,7 @@ import { useAppContext } from "@/context/AppContext";
 
 const Footer = () => {
   const {
-    homeData: { footer: footerData },
+    data: { footer: footerData },
   } = useAppContext();
   return (
     <FooterContainer>

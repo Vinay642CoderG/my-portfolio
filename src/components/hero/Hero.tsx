@@ -15,7 +15,7 @@ import { useAppContext } from "@/context/AppContext";
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const {
-    homeData: { hero: heroData },
+    data: { hero: heroData },
   } = useAppContext();
 
   useEffect(() => {

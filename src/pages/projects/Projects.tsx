@@ -29,7 +29,7 @@ import { useEffect } from "react";
 
 const ProjectsPage = () => {
   const {
-    homeData: { projects: projectsData },
+    data: { projects: projectsData },
   } = useAppContext();
 
   useEffect(() => {

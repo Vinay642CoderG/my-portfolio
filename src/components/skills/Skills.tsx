@@ -14,7 +14,7 @@ import { useAppContext } from "@/context/AppContext";
 
 const Skills = () => {
   const {
-    homeData: { skills: skillsData },
+    data: { skills: skillsData },
   } = useAppContext();
 
   return (

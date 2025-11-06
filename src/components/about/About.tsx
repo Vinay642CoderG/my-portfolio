@@ -12,7 +12,7 @@ import { getStableId } from "@/helpers/getStableId";
 
 const About = () => {
   const {
-    homeData: { about: aboutData },
+    data: { about: aboutData },
   } = useAppContext();
   return (
     <AboutContainer id="about">

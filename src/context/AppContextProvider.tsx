@@ -1,7 +1,7 @@
 import React, { useState, type ReactNode } from "react";
 import { AppContext } from "./AppContext";
 import type { IAppContext } from "@/types/types";
-import homeData from "@/data/homeData";
+import data from "@/data/data";
 
 interface IAppContextProviderProps {
   children: ReactNode;
@@ -13,7 +13,7 @@ const AppContextProvider = ({ children }: IAppContextProviderProps) => {
   const value: IAppContext = {
     theme,
     setTheme,
-    homeData,
+    data,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

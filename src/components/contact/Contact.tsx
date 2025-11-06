@@ -16,7 +16,7 @@ import { getStableId } from "@/helpers/getStableId";
 
 const Contact = () => {
   const {
-    homeData: { contact: contactData },
+    data: { contact: contactData },
   } = useAppContext();
   return (
     <ContactSection id="contact">

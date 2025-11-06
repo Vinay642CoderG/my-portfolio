@@ -16,7 +16,7 @@ export const BreadcrumbLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  color: #007bff;
+  color: #00adb5;
   text-decoration: none;
   font-weight: 500;
 
@@ -31,6 +31,6 @@ export const BreadcrumbSeparator = styled.span`
 `;
 
 export const BreadcrumbCurrent = styled.span`
-  color: #333;
+  color: #b8b6b6;
   font-weight: 600;
 `;

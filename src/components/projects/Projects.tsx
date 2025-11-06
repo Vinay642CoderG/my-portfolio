@@ -20,7 +20,7 @@ import { getStableId } from "@/helpers/getStableId";
 
 const Projects = () => {
   const {
-    homeData: { projects: projectsData },
+    data: { projects: projectsData },
   } = useAppContext();
 
   return (

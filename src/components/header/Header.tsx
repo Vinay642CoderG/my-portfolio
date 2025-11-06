@@ -30,18 +30,10 @@ const menuItems = [
 
 const Header = () => {
   const {
-    homeData: { header: headerData },
+    data: { header: headerData },
   } = useAppContext();
   const [open, setOpen] = useState(false);
 
-  // const renderLinks = (onClick?: () => void) =>
-  //   menuItems.map(({ id, label, icon }) => (
-  //     <NavLinkStyled key={id} href={`#${id}`} onClick={onClick}>
-  //       {icon} {label}
-  //     </NavLinkStyled>
-  //   ));
-
-  // inside your component
   const location = useLocation();
 
   const renderLinks = (onClick?: () => void) => {

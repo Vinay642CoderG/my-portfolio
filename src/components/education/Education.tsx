@@ -15,7 +15,7 @@ import { getStableId } from "@/helpers/getStableId";
 
 const Education = () => {
   const {
-    homeData: { education: educationData },
+    data: { education: educationData },
   } = useAppContext();
 
   return (

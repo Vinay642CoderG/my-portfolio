@@ -11,7 +11,7 @@ import { getStableId } from "@/helpers/getStableId";
 
 const Experience = () => {
   const {
-    homeData: { experience: experienceData },
+    data: { experience: experienceData },
   } = useAppContext();
   return (
     <ExperienceContainer id="experience">
