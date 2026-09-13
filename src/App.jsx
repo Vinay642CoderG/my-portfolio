@@ -35,7 +35,6 @@ import {
   Layers,
   Server,
   Sparkles,
-  Phone,
 } from 'lucide-react'
 import { projects } from './data/projects'
 import { services } from './data/services'
@@ -508,12 +507,6 @@ export default function App() {
                     href={`mailto:${profile.email}`}
                   >
                     <Mail className="text-[var(--accent)]" size={18} /> {profile.email}
-                  </a>
-                  <a
-                    className="inline-flex items-center gap-3 rounded-xl border border-[var(--line)] bg-[var(--bg)] px-4 py-3 text-sm font-semibold transition hover:-translate-y-1 hover:border-[var(--accent-two)]"
-                    href={`tel:${profile.phone.replaceAll('-', '')}`}
-                  >
-                    <Phone className="text-[var(--accent-two)]" size={18} /> {profile.phone}
                   </a>
                 </div>
               </div>
