@@ -122,9 +122,7 @@ function TechnologyTag({ name }) {
 }
 
 export default function App() {
-  const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') || 'dark',
-  )
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
   const [filter, setFilter] = useState('All')
   useEffect(() => {
     document.documentElement.dataset.theme = theme

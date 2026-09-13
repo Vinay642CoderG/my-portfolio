@@ -4,5 +4,14 @@ export const skills = [
   ['Backend', ['Node.js', 'Express.js', 'RESTful API Development', 'JWT Authentication']],
   ['Databases', ['MongoDB', 'MySQL']],
   ['Tools & Platforms', ['Git', 'GitHub', 'VS Code', 'Postman', 'npm']],
-  ['Development Concepts', ['MVC Architecture', 'CRUD Operations', 'API Integration', 'Version Control', 'Agile Development']],
+  [
+    'Development Concepts',
+    [
+      'MVC Architecture',
+      'CRUD Operations',
+      'API Integration',
+      'Version Control',
+      'Agile Development',
+    ],
+  ],
 ]
